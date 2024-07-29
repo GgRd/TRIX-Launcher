@@ -2,23 +2,19 @@
     <div class="nav-settings">
         <p>Paramètres</p>
         <div class="nav-box">
-            <div id="account" class="nav-settings-btn active-settings-BTN">COMPTES</div>
-            <div id="java" class="nav-settings-btn">JAVA</div>
-            <div id="resolution" class="nav-settings-btn">RESOLUTION</div>
-            <div id="launcher" class="nav-settings-btn">LAUNCHER</div>
+            <div id="account" class="nav-settings-btn active-settings-BTN">COMPTE</div>
+            <div id="java" class="nav-settings-btn">RESSOURCES</div>
+            <div id="resolution" class="nav-settings-btn">LAUNCHER</div>
+            <div id="credits" class="nav-settings-btn">CRÉDITS</div>
             <div id="save" class="nav-settings-btn">ACCUEIL</div>
         </div>
     </div>
 
     <div id="account-tab" class="container-settings active-container-settings">
-        <div class="titre-tab">Comptes joueurs</div>
+        <div class="titre-tab">Compte actuel</div>
 
         <div class="accounts-list content-scroll">
-            <div class="account" id="add">
-                <div class="add-profile">
-                    <div class="icon-account-add"></div>
-                </div>
-                <div class="add-text-profile">Ajouter un compte</div>
+            <div class="" id="">
             </div>
         </div>
     </div>
@@ -55,21 +51,21 @@
             </div>
         </div>
 
-        <div class="titre-tab">Emplacement de Java</div>
+        <div class="titre-tab">Paramètre de téléchargement</div>
         <div class="settings-elements-box">
             <div class="setting-text">
-                Le launcher utilise une version embarquée de Java.<br>
-                Cette version est disponible dans le répertoire :<br><span class="java-path-txt"></span><br>
-                Toutefois, vous pouvez spécifier votre propre exécutable si votre jeu requiert une version de java plus
-                recente.
+                Ce paramètre détermine le nombre maximum de fichiers pouvant être téléchargés simultanément lors de la
+                mise à jour ou du téléchargement de ressources.<br><br>
+
+                Veuillez noter que la modification de ce paramètre peut affecter les performances de
+                téléchargement.<br>
+                Il est recommandé de ne pas dépasser les limites recommandées par défaut,<br>
+                sauf si vous rencontrez des problèmes spécifiques de connectivité.
             </div>
-            <div class="settings-elements content-evenly">
-                <input type="text" class="java-path-input-text" disabled>
-                <input type="file" class="java-path-input-file" accept="application/octet-stream" />
-                <div class="java-path-box">
-                    <div class="java-path-set java-path-btn">Changer</div>
-                    <div class="java-path-reset java-path-btn">Par defaut</div>
-                </div>
+            <div class="settings-elements content-center">
+                <input type="number" class="max-files input-max-files">
+                <p>Fichiers</p>
+                <div class="max-files-reset max-files-btn">Par defaut</div>
             </div>
         </div>
     </div>
@@ -91,54 +87,40 @@
                 <div class="size-reset size-btn">Par defaut</div>
             </div>
         </div>
+
+    <div class="titre-tab">Comportement du launcher au démarrage</div>
+    <div class="settings-elements-box">
+        <div class="setting-text">
+            Vous pouvez choisir si le launcher se ferme automatiquement ou reste ouvert lorsque vous lancez le jeu.
+        </div>
+
+        <div class="settings-elements content-evenly close-box">
+            <div class="close-launcher close-btn">Fermer le launcher après le démarrage du jeu</div>
+            <div class="close-none close-btn">Garder le launcher ouvert</div>
+        </div>
     </div>
 
-    <div id="launcher-tab" class="container-settings content-scroll">
-        <div class="titre-tab">Paramètre de téléchargement</div>
+    <div id="credits-tab" class="container-settings content-scroll">
+        <div class="titre-tab">Conditions et services</div>
         <div class="settings-elements-box">
             <div class="setting-text">
-                Ce paramètre détermine le nombre maximum de fichiers pouvant être téléchargés simultanément lors de la
-                mise à jour ou du téléchargement de ressources.<br><br>
+                Conditions d'utilisation de l'application client TSMP<br><br>
+                1. Restriction sur la distribution du contenu :<br><br>
+                La distribution, la reproduction ou le partage des ressources téléchargées par l'intermédiaire de l'application sont strictement interdits.
+                Cela comprend, sans s'y limiter, les images, les fichiers multimédias et les documents obtenus par l'intermédiaire de l'application.
+                Ces ressources sont la propriété exclusive de TSMP et de son équipe de détenteurs de droits,
+                et ne peuvent être utilisées qu'à des fins personnelles dans le cadre de l'application.<br><br>
 
-                Veuillez noter que la modification de ce paramètre peut affecter les performances de
-                téléchargement.<br>
-                Il est recommandé de ne pas dépasser les limites recommandées par défaut,<br>
-                sauf si vous rencontrez des problèmes spécifiques de connectivité.
-            </div>
-            <div class="settings-elements content-center">
-                <input type="number" class="max-files input-max-files">
-                <p>Fichiers</p>
-                <div class="max-files-reset max-files-btn">Par defaut</div>
+                2. Les modifications apportées à l'application :<br><br>
+                Les modifications, les altérations, les décompilations et l'ingénierie inverse de l'application ne sont pas autorisées.
+                Cela inclut toute tentative de modification de sa fonctionnalité, de son interface ou de sa structure.
+                L'application est fournie dans sa forme originale, et toute modification non autorisée peut entraîner une violation des droits de propriété intellectuelle,
+                entraînant la révocation immédiate de vos droits d'utilisation.<br><br><br>
+
+                Créé par GgRd<br><br>
             </div>
         </div>
-
-        <div class="titre-tab">Thème clair et sombre</div>
-        <div class="settings-elements-box">
-            <div class="setting-text">
-                Choisissez entre le thème clair et le thème sombre pour personnaliser l'apparence du launcher.<br><br>
-
-                La modification du thème peut influencer la lisibilité et l'expérience visuelle.<br>
-                Sélectionnez celui qui vous convient le mieux en fonction de vos préférences.
-            </div>
-            <div class="settings-elements content-center theme-box">
-                <div class="theme-btn theme-btn-clair">Clair</div>
-                <div class="theme-btn theme-btn-sombre">Sombre</div>
-                <div class="theme-btn theme-btn-auto">Automatique</div>
-            </div>
-        </div>
-
-        <div class="titre-tab">Comportement du launcher au démarrage</div>
-        <div class="settings-elements-box">
-            <div class="setting-text">
-                Vous pouvez choisir si le launcher se ferme automatiquement ou reste ouvert lorsque vous lancez le jeu.
-            </div>
-
-            <div class="settings-elements content-evenly close-box">
-                <div class="close-launcher close-btn">Fermer le launcher après le démarrage du jeu</div>
-                <div class="close-none close-btn">Garder le launcher ouvert</div>
-                <div class="close-all close-btn">Fermer le jeu si le launcher est fermé</div>
-            </div>
-        </div>
+    </div>
 
         <!-- <div class="titre-tab">Environnement INTEL</div>
         <div class="settings-elements-box">
@@ -151,5 +133,3 @@
                 <div class="close-none close-btn">Environnement SILICON</div>
             </div>
         </div> -->
-    </div>
-</div>

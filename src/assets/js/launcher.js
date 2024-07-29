@@ -68,16 +68,6 @@ class Launcher {
             ipcRenderer.send('main-window-minimize');
         });
 
-        let maximized = false;
-        let maximize = document.querySelector('#maximize')
-        maximize.addEventListener('click', () => {
-            if (maximized) ipcRenderer.send('main-window-maximize')
-            else ipcRenderer.send('main-window-maximize');
-            maximized = !maximized
-            maximize.classList.toggle('icon-maximize')
-            maximize.classList.toggle('icon-restore-down')
-        });
-
         document.querySelector('#close').addEventListener('click', () => {
             ipcRenderer.send('main-window-close');
         })
@@ -94,18 +84,18 @@ class Launcher {
                 java_config: {
                     java_path: null,
                     java_memory: {
-                        min: 2,
-                        max: 4
+                        min: 5,
+                        max: 7
                     }
                 },
                 game_config: {
                     screen_size: {
-                        width: 854,
-                        height: 480
+                        width: 1280,
+                        height: 720
                     }
                 },
                 launcher_config: {
-                    download_multi: 5,
+                    download_multi: 20,
                     theme: 'auto',
                     closeLauncher: 'close-launcher',
                     intelEnabledMac: true

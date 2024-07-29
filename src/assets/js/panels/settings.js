@@ -15,7 +15,6 @@ class Settings {
         this.navBTN()
         this.accounts()
         this.ram()
-        this.javaPath()
         this.resolution()
         this.launcher()
     }
@@ -161,43 +160,6 @@ class Settings {
         });
     }
 
-    async javaPath() {
-        let javaPathText = document.querySelector(".java-path-txt")
-        javaPathText.textContent = `${await appdata()}/${process.platform == 'darwin' ? this.config.dataDirectory : `.${this.config.dataDirectory}`}/runtime`;
-
-        let configClient = await this.db.readData('configClient')
-        let javaPath = configClient?.java_config?.java_path || 'Utiliser la version de java livre avec le launcher';
-        let javaPathInputTxt = document.querySelector(".java-path-input-text");
-        let javaPathInputFile = document.querySelector(".java-path-input-file");
-        javaPathInputTxt.value = javaPath;
-
-        document.querySelector(".java-path-set").addEventListener("click", async () => {
-            javaPathInputFile.value = '';
-            javaPathInputFile.click();
-            await new Promise((resolve) => {
-                let interval;
-                interval = setInterval(() => {
-                    if (javaPathInputFile.value != '') resolve(clearInterval(interval));
-                }, 100);
-            });
-
-            if (javaPathInputFile.value.replace(".exe", '').endsWith("java") || javaPathInputFile.value.replace(".exe", '').endsWith("javaw")) {
-                let configClient = await this.db.readData('configClient')
-                let file = javaPathInputFile.files[0].path;
-                javaPathInputTxt.value = file;
-                configClient.java_config.java_path = file
-                await this.db.updateData('configClient', configClient);
-            } else alert("Le nom du fichier doit être java ou javaw");
-        });
-
-        document.querySelector(".java-path-reset").addEventListener("click", async () => {
-            let configClient = await this.db.readData('configClient')
-            javaPathInputTxt.value = 'Utiliser la version de java livre avec le launcher';
-            configClient.java_config.java_path = null
-            await this.db.updateData('configClient', configClient);
-        });
-    }
-
     async resolution() {
         let configClient = await this.db.readData('configClient')
         let resolution = configClient?.game_config?.screen_size || { width: 1920, height: 1080 };
@@ -253,40 +215,6 @@ class Settings {
 
         let themeBox = document.querySelector(".theme-box");
         let theme = configClient?.launcher_config?.theme || "auto";
-
-        if (theme == "auto") {
-            document.querySelector('.theme-btn-auto').classList.add('active-theme');
-        } else if (theme == "dark") {
-            document.querySelector('.theme-btn-sombre').classList.add('active-theme');
-        } else if (theme == "light") {
-            document.querySelector('.theme-btn-clair').classList.add('active-theme');
-        }
-
-        themeBox.addEventListener("click", async e => {
-            if (e.target.classList.contains('theme-btn')) {
-                let activeTheme = document.querySelector('.active-theme');
-                if (e.target.classList.contains('active-theme')) return
-                activeTheme?.classList.remove('active-theme');
-
-                if (e.target.classList.contains('theme-btn-auto')) {
-                    setBackground();
-                    theme = "auto";
-                    e.target.classList.add('active-theme');
-                } else if (e.target.classList.contains('theme-btn-sombre')) {
-                    setBackground(true);
-                    theme = "dark";
-                    e.target.classList.add('active-theme');
-                } else if (e.target.classList.contains('theme-btn-clair')) {
-                    setBackground(false);
-                    theme = "light";
-                    e.target.classList.add('active-theme');
-                }
-
-                let configClient = await this.db.readData('configClient')
-                configClient.launcher_config.theme = theme;
-                await this.db.updateData('configClient', configClient);
-            }
-        })
 
         let closeBox = document.querySelector(".close-box");
         let closeLauncher = configClient?.launcher_config?.closeLauncher || "close-launcher";
