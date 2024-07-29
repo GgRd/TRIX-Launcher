@@ -1,7 +1,7 @@
 {
     "name": "TSMP-Launcher",
     "preductname": "TSMP Launcher",
-    "version": "2.0.8",
+    "version": "2.0.9",
     "description": "Launcher Minecraft pour les projets de TSMP",
     "main": "src/app.js",
     "author": {
