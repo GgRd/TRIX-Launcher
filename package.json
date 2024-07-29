@@ -1,8 +1,8 @@
 {
     "name": "TSMP-Launcher",
     "preductname": "TSMP Launcher",
-    "version": "1.0.1",
-    "description": "Launcher Mincraft pour les projets de TSMP",
+    "version": "2.0.8",
+    "description": "Launcher Minecraft pour les projets de TSMP",
     "main": "src/app.js",
     "author": {
         "name": "GgRd, Inc.",
