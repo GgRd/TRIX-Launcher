@@ -14,25 +14,29 @@
 .status-server {
     position: absolute;
     display: flex;
-    justify-content: center;  /* Centrer horizontalement */
-    align-items: center;      /* Centrer verticalement */
-    background: rgba(255, 192, 73, 0.1);
+    bottom: 0;
+    right: 0;
     width: 15rem;
-    height: 2.8rem;
-    color: var(--color);
-    border-radius: 23px;
-    padding: 1rem;
-    left: 76%;
-    top: 85%;
+    height: 5rem;
+    justify-content: center; /* Centrer horizontalement */
+    margin-bottom: 2rem; /* Ajuster la marge inférieure pour monter encore plus */
+    align-items: center; /* Centrer verticalement */
+    flex-direction: column; /* Aligner les éléments verticalement */
     text-align: center;
     backdrop-filter: blur(5px);
     border: 2px solid rgb(255, 192, 73);
     transition: 0.3s, color 0.3s, box-shadow 0.3s;
     z-index: 999;
+    color: var(--color);
+    border-radius: 23px;
+    background: rgba(255, 192, 73, 0.1);
+    margin-left: auto; /* Pousser vers la droite */
+    margin-right: 40px; /* Ajouter une marge à droite pour les éloigner du bord */
+    margin-top: 1rem; /* Ajouter une marge en haut pour les monter */
 }
 
 .status-info.active {
-    pointer-events: auto; 
+    pointer-events: auto;
 }
 
 .close-info {
@@ -298,13 +302,14 @@
 .play-btn {
     position: relative;
     width: 200px;
-    height: 50px;
+    height: 60px;
     border-style: solid;
     border-width: 1px;
-    top: -9px;
+    top: -6px;
     left: -5px;
     border-color: rgb(255, 192, 73);
     background-color: rgba(255, 192, 73, 0.5);
+    font: normal normal bold 20px/25px Trebuchet MS;
     text-align: center;
     color: #ffffff;
     border-top-right-radius: 20px;
