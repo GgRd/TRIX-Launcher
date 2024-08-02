@@ -72,6 +72,86 @@ ipcMain.handle('is-dark-theme', (_, theme) => {
 
 app.on('window-all-closed', () => app.quit());
 
+let startedAppTime = Date.now();
+
+const rpc = require('discord-rpc');
+let client = new rpc.Client({ transport: 'ipc' });
+const clientId = '1198484873724297318';
+
+ipcMain.on('new-status-discord', async () => {
+    client.login({ clientId: '1198484873724297318' });
+    client.on('ready', () => {
+        client.request('SET_ACTIVITY', {
+            pid: process.pid,
+            activity: {
+                details: 'Launcher Minecraft',
+                assets: {
+                    large_image: 'tsmplogo',
+                },
+                instance: false,
+                timestamps: {
+                    start: startedAppTime
+                },
+                buttons: [
+                    { label: "Nous rejoindre", url: "https://discord.gg" },
+                    { label: "Notre site", url: "https://trixsmp.online" }
+                ]
+            },
+        });
+    });
+});
+
+ipcMain.on('new-status-discord-jugando', async (event, status) => {
+    console.log(status)
+    if(client) await client.destroy();
+    client = new rpc.Client({ transport: 'ipc' });
+    client.login({ clientId: '1198484873724297318' });
+    client.on('ready', () => {
+        client.request('SET_ACTIVITY', {
+            pid: process.pid,
+            activity: {
+                details: status,
+                assets: {
+                    large_image: 'tsmplogo',
+                },
+                instance: false,
+                timestamps: {
+                    start: startedAppTime
+                },
+                buttons: [
+                    { label: "Nous rejoindre", url: "https://discord.gg" },
+                    { label: "Notre site", url: "https://trixsmp.online" }
+                ]
+            },
+        });
+    });
+});
+
+ipcMain.on('delete-and-new-status-discord', async () => { 
+    if(client) client.destroy();
+    client = new rpc.Client({ transport: 'ipc' });
+    client.login({ clientId: '1198484873724297318' });
+    client.on('ready', () => {
+        client.request('SET_ACTIVITY', {
+            pid: process.pid,
+            activity: {
+                details: 'Launcher Minecraft',
+                assets: {
+                    large_image: 'tsmplogo',
+                },
+                instance: false,
+                timestamps: {
+                    start: startedAppTime
+                },
+                buttons: [
+                    { label: "Nous rejoindre", url: "https://discord.gg" },
+                    { label: "Notre site", url: "https://trixsmp.online" }
+                ]
+            },
+        });
+    });
+});
+
 autoUpdater.autoDownload = false;
 
 ipcMain.handle('update-app', async () => {

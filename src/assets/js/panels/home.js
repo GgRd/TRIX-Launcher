@@ -14,6 +14,11 @@ class Home {
         this.db = new database();
         this.socialLick()
         this.instancesSelect()
+        this.startDiscordStatus()
+    }
+
+    async startDiscordStatus() {
+        ipcRenderer.send('new-status-discord');
         document.querySelector('.settings-btn').addEventListener('click', e => changePanel('settings'))
     }
 
