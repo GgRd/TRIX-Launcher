@@ -181,6 +181,7 @@ class Home {
         infoStartingBOX.style.display = "block"
         progressBar.style.display = "";
         ipcRenderer.send('main-window-progress-load')
+        ipcRenderer.send('new-status-discord-jugando',  `Joue sur ${options.name}`)
 
         launch.on('extract', extract => {
             ipcRenderer.send('main-window-progress-load')
@@ -225,7 +226,7 @@ class Home {
             };
             new logger('Minecraft', '#36b030');
             ipcRenderer.send('main-window-progress-load')
-            infoStarting.innerHTML = `Demarrage en cours...`
+            infoStarting.innerHTML = `Démarrage en cours...`
             console.log(e);
         })
 

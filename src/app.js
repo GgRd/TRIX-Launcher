@@ -72,37 +72,38 @@ ipcMain.handle('is-dark-theme', (_, theme) => {
 
 app.on('window-all-closed', () => app.quit());
 
-let startedAppTime = Date.now();
-
 const rpc = require('discord-rpc');
 let client = new rpc.Client({ transport: 'ipc' });
-const clientId = '1198484873724297318';
+const pkg = require('../package.json');
+let startedAppTime = Date.now();
 
-ipcMain.on('new-status-discord', async () => {
+ipcMain.on('new-status-discord', async (event, instance, imginstance) => {
     client.login({ clientId: '1198484873724297318' });
     client.on('ready', () => {
         client.request('SET_ACTIVITY', {
             pid: process.pid,
             activity: {
-                details: 'Launcher Minecraft',
+                details: 'Dans le menu principal',
+                state: `Instance sélectionnée : ${instance}`,
                 assets: {
                     large_image: 'tsmplogo',
+                    large_text: `v${pkg.version}`,
+                    small_image: `${imginstance}`,
+                    small_text: `${instance}`,
                 },
+                buttons: [
+                    { label: 'Nous rejoindre 🌐', url: "https://trixsmp.online" },
+                ],
                 instance: false,
                 timestamps: {
                     start: startedAppTime
-                },
-                buttons: [
-                    { label: "Nous rejoindre", url: "https://discord.gg" },
-                    { label: "Notre site", url: "https://trixsmp.online" }
-                ]
+                }
             },
         });
     });
-});
+})
 
-ipcMain.on('new-status-discord-jugando', async (event, status) => {
-    console.log(status)
+ipcMain.on('new-status-discord-jugando', async (event, instance, imginstance, version) => {
     if(client) await client.destroy();
     client = new rpc.Client({ transport: 'ipc' });
     client.login({ clientId: '1198484873724297318' });
@@ -110,24 +111,27 @@ ipcMain.on('new-status-discord-jugando', async (event, status) => {
         client.request('SET_ACTIVITY', {
             pid: process.pid,
             activity: {
-                details: status,
+                details: `${instance}`,
+                state: `Minecraft v${version}`,
                 assets: {
-                    large_image: 'tsmplogo',
+                    large_image: `${imginstance}`,
+                    large_text: `${instance}`,
+                    small_image: '512x512',
+                    small_text: `v${pkg.version}`
                 },
+                buttons: [
+                    { label: 'Nous rejoindre 🌐', url: "https://trixsmp.online" },
+                ],
                 instance: false,
                 timestamps: {
                     start: startedAppTime
-                },
-                buttons: [
-                    { label: "Nous rejoindre", url: "https://discord.gg" },
-                    { label: "Notre site", url: "https://trixsmp.online" }
-                ]
+                }
             },
         });
     });
 });
 
-ipcMain.on('delete-and-new-status-discord', async () => { 
+ipcMain.on('delete-and-new-status-discord', async (event, instance, imginstance) => {
     if(client) client.destroy();
     client = new rpc.Client({ transport: 'ipc' });
     client.login({ clientId: '1198484873724297318' });
@@ -135,22 +139,26 @@ ipcMain.on('delete-and-new-status-discord', async () => {
         client.request('SET_ACTIVITY', {
             pid: process.pid,
             activity: {
-                details: 'Launcher Minecraft',
+                details: 'Dans le menu principal',
+                state: `Instance sélectionnée : ${instance}`,
                 assets: {
                     large_image: 'tsmplogo',
+                    large_text: `v${pkg.version}`,
+                    small_image: `${imginstance}`,
+                    small_text: `${instance}`,
                 },
+                buttons: [
+                    { label: 'Nous rejoindre 🌐', url: "https://trixsmp.online" },
+                ],
                 instance: false,
                 timestamps: {
                     start: startedAppTime
-                },
-                buttons: [
-                    { label: "Nous rejoindre", url: "https://discord.gg" },
-                    { label: "Notre site", url: "https://trixsmp.online" }
-                ]
+                }
             },
         });
     });
 });
+
 
 autoUpdater.autoDownload = false;
 
