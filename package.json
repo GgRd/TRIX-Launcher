@@ -1,11 +1,11 @@
 {
     "name": "TSMP-Launcher",
     "preductname": "TSMP Launcher",
-    "version": "2.1.1",
+    "version": "2.1.2",
     "description": "Launcher Minecraft pour les projets de TSMP",
     "main": "src/app.js",
     "author": {
-        "name": "Luuxis, GgRd",
+        "name": "GgRd, TRIX Studios, Luuxis",
         "email": "contact@ggrd.fr",
         "url": "https://github.com/ggrd"
     },

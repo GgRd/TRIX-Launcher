@@ -32,7 +32,9 @@ class Splash {
         let splashes = [
             { "message": "TRIX SMP c'était un bon SMP", "author": "GgRd" },
             { "message": "Aimez-vous les sushis ?", "author": "GgRd" },
-            { "message": "Les IA vont détruire le monde", "author": "GgRd" }
+            { "message": "Les IA vont détruire le monde", "author": "GgRd" },
+            { "message": "Squid Game 2 arrive bientôt", "author": "GgRd" },
+            { "message": "Pourquoi tu lis ça ?", "author": "GgRd" }
         ];
         let splash = splashes[Math.floor(Math.random() * splashes.length)];
         this.splashMessage.textContent = splash.message;
@@ -54,7 +56,7 @@ class Splash {
         this.setStatus(`Recherche de mise à jour...`);
 
         ipcRenderer.invoke('update-app').then().catch(err => {
-            return this.shutdown(`erreur lors de la recherche de mise à jour :<br>${err.message}`);
+            return this.shutdown(`Erreur lors de la recherche de mise à jour :<br>${err.message}`);
         });
 
         ipcRenderer.on('updateAvailable', () => {
@@ -130,8 +132,8 @@ class Splash {
     }
 
     shutdown(text) {
-        this.setStatus(`${text}<br>Arrêt dans 5s`);
-        let i = 4;
+        this.setStatus(`${text}<br>Arrêt dans 10s`);
+        let i = 9;
         setInterval(() => {
             this.setStatus(`${text}<br>Arrêt dans ${i--}s`);
             if (i < 0) ipcRenderer.send('update-window-close');
