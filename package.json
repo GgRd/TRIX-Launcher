@@ -1,7 +1,7 @@
 {
-    "name": "TSMP-Launcher",
-    "preductname": "TSMP Launcher",
-    "version": "2.1.4",
+    "name": "TRIXStudios-Launcher",
+    "preductname": "TRIX Studios Launcher",
+    "version": "2.1.5",
     "description": "Launcher Minecraft pour les projets du TRIX Studios",
     "main": "src/app.js",
     "author": {

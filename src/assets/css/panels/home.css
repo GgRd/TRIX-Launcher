@@ -24,12 +24,12 @@
     flex-direction: column; /* Aligner les éléments verticalement */
     text-align: center;
     backdrop-filter: blur(5px);
-    border: 2px solid rgb(255, 192, 73);
+    border: 2px solid rgb(18,227,32);
     transition: 0.3s, color 0.3s, box-shadow 0.3s;
     z-index: 999;
     color: var(--color);
     border-radius: 23px;
-    background: rgba(255, 192, 73, 0.1);
+    background: rgba(0,107,16, 0.1);
     margin-left: auto; /* Pousser vers la droite */
     margin-right: 40px; /* Ajouter une marge à droite pour les éloigner du bord */
     margin-top: 1rem; /* Ajouter une marge en haut pour les monter */
@@ -209,7 +209,7 @@
 
 .social-block {
     display: flex;
-    background: rgba(255, 192, 73, 0.2); /* Fond gris semi-transparent */
+    background: rgba(0,107,16, 0.2); /* Fond gris semi-transparent */
     width: 50px; /* Réduit la taille de l'élément social */
     height: 50px; /* Réduit la taille de l'élément social */
     margin-bottom: 1.8rem; /* Plus d'espacement entre les éléments */
@@ -218,12 +218,12 @@
     cursor: pointer;
     align-items: center;
     justify-content: center;
-    border: 2px solid rgb(255, 192, 73); /* Contour noir semi-transparent */
+    border: 2px solid rgb(18,227,32); /* Contour noir semi-transparent */
     transition: background-color 0.3s, transform 0.3s; /* Ajouter une transition pour l'effet */
 }
 
 .social-block:hover {
-    background-color: rgba(255, 192, 73, 0.5); /* Changer la couleur de fond au survol */
+    background-color: rgba(0,107,16, 0.5); /* Changer la couleur de fond au survol */
 }
 
 .social-block .icon-social {
@@ -307,8 +307,8 @@
     border-width: 1px;
     top: -6px;
     left: -5px;
-    border-color: rgb(255, 192, 73);
-    background-color: rgba(255, 192, 73, 0.5);
+    border-color: rgb(18,227,32);
+    background-color: rgba(0,107,16, 0.5);
     font: normal normal bold 20px/25px Trebuchet MS;
     text-align: center;
     color: #ffffff;
@@ -324,7 +324,7 @@
 
 .play-btn:hover {
     color: #fff;
-    background: rgb(255, 174, 25);
+    background: rgb(0,107,16);
     letter-spacing: 2px;
     transition: 0.2s;
     cursor: pointer;
@@ -342,10 +342,10 @@
     width: 50px; /* Assurez-vous que les dimensions sont cohérentes */
     border-style: solid;
     border-width: 1px;
-    border-color: rgb(255, 192, 73);
+    border-color: rgb(18,227,32);
     color: transparent;
     background-image: url(../../images/instance.png);
-    background-color: rgba(255, 192, 73, 0.5);
+    background-color: rgba(0,107,16, 0.5);
     background-position: center;
     background-size: 20px 20px;
     background-repeat: no-repeat;
@@ -360,7 +360,7 @@
 .instance-select:hover {
     cursor: pointer;
     transition: 0.2s;
-    background-color: rgba(255, 192, 73, 0.5);
+    background-color: rgba(0,107,16, 0.5);
     backdrop-filter: blur(8px);
 }
 
@@ -402,8 +402,8 @@
     background-image: url(../../images/settings.png);
     border-style: solid;
     border-width: 1px;
-    border-color: rgb(255, 192, 73);
-    background-color: rgba(255, 192, 73, 0.5);
+    border-color: rgb(18,227,32);
+    background-color: rgba(0,107,16, 0.5);
     width: 50px;
     height: 50px;
     margin-bottom: 5rem;
@@ -417,7 +417,7 @@
 }
 
 .settings-btn:hover {
-    background: rgb(255, 192, 73);
+    background: rgb(0,107,16);
     transition: 0.2s;
     backdrop-filter: blur(8px);
     cursor: pointer;

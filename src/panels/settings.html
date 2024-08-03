@@ -2,39 +2,35 @@
     <div class="nav-settings">
         <p>Paramètres</p>
         <div class="nav-box">
-            <div id="account" class="nav-settings-btn active-settings-BTN">COMPTE</div>
-            <div id="java" class="nav-settings-btn">RESSOURCES</div>
+            <div id="account" class="nav-settings-btn active-settings-BTN">ACCOUNT</div>
+            <div id="java" class="nav-settings-btn">RESOURCES</div>
             <div id="resolution" class="nav-settings-btn">LAUNCHER</div>
-            <div id="credits" class="nav-settings-btn">CRÉDITS</div>
-            <div id="save" class="nav-settings-btn">ACCUEIL</div>
+            <div id="credits" class="nav-settings-btn">CREDITS</div>
+            <div id="save" class="nav-settings-btn">HOME</div>
         </div>
     </div>
 
     <div id="account-tab" class="container-settings active-container-settings">
-        <div class="titre-tab">Compte actuel</div>
+        <div class="titre-tab">Current account</div>
 
         <div class="accounts-list content-scroll">
             <div class="account" id="add">
                 <div class="add-profile">
                     <div class="icon-account-add"></div>
                 </div>
-                <div class="add-text-profile">Ajouter un compte</div>
+                <div class="add-text-profile">Add an account</div>
             </div>
         </div>
     </div>
 
     <div id="java-tab" class="container-settings content-scroll">
-        <div class="titre-tab">Paramètre de votre RAM</div>
+        <div class="titre-tab">RAM settings</div>
         <div class="settings-elements-box">
             <div class="setting-text">
-                Définition de la RAM alloué à votre jeu, une quantité plus important augmenteras les performances de
-                votre jeu.<br>
-                A noter qu'il faut éviter de mettre une trop grande quantité sinon cela peut provoquer des pertes de
-                performances sur vos autres applications.<br><br>
-                <b>-RAM Maximale:</b> Indique la quantité totale de RAM allouée à votre jeu. Il est recommandé de ne pas
-                dépasser 50% de la quantité totale de RAM présente sur votre PC.<br><br>
-                <b>-RAM Minimale:</b> Indique la quantité minimale de RAM allouée au démarrage de votre jeu. Il est
-                recommandé de ne pas mettre plus de 4Go pour cette valeur.
+                Define the RAM allocated to your game, a larger amount will increase performance.<br>
+                It's important to avoid using too large a quantity, as this can lead to performance losses on your other applications.<br><br>
+                <b>-Maximum RAM:</b> Indicates the total amount of RAM allocated to your game. It is recommended not to exceed 50% of the total RAM on your PC.<br><br>
+                <b>-Minimum RAM:</b> Indicates the minimum amount of RAM allocated to start your game. We recommend that you set this value to no more than 4GB.
             </div>
             <div class="settings-elements content-evenly">
                 <div class="memory-slider" min="0.5" max="8" step="0.5">
@@ -49,38 +45,35 @@
                     </div>
                 </div>
                 <div class="ram-info-block">
-                    <b>Vous possédez un total de <span id="total-ram">0 Go</span> RAM.</b><br>
-                    <b>Vous possédez un total de <span id="free-ram">0 Go</span> RAM disponible.</b>
+                    <b>You have a total of <span id="total-ram">0 Go</span> RAM.</b><br>
+                    <b>You have a total of <span id="free-ram">0 Go</span> RAM available.</b>
                 </div>
             </div>
         </div>
 
-        <div class="titre-tab">Paramètre de téléchargement</div>
+        <div class="titre-tab">Download parameter</div>
         <div class="settings-elements-box">
             <div class="setting-text">
-                Ce paramètre détermine le nombre maximum de fichiers pouvant être téléchargés simultanément lors de la
-                mise à jour ou du téléchargement de ressources.<br><br>
+                This setting determines the maximum number of files that can be downloaded simultaneously when updating or downloading resources.<br><br>
 
-                Veuillez noter que la modification de ce paramètre peut affecter les performances de
-                téléchargement.<br>
-                Il est recommandé de ne pas dépasser les limites recommandées par défaut,<br>
-                sauf si vous rencontrez des problèmes spécifiques de connectivité.
+                Please note that changing this setting may affect download performance.<br>
+                It is recommended not to exceed the recommended default limits,<br>
+                unless you're experiencing specific connectivity problems.
             </div>
             <div class="settings-elements content-center">
                 <input type="number" class="max-files input-max-files">
-                <p>Fichiers</p>
-                <div class="max-files-reset max-files-btn">Par defaut</div>
+                <p>Files</p>
+                <div class="max-files-reset max-files-btn">Default Settings</div>
             </div>
         </div>
     </div>
 
     <div id="resolution-tab" class="container-settings">
-        <div class="titre-tab">Paramètres de resolution Minecraft</div>
+        <div class="titre-tab">Minecraft resolution settings</div>
         <div class="settings-elements-box">
             <div class="setting-text">
-                Définissez une résolution personnalisée afin d'avoir un jeu adapté à votre écran.<br>
-                Par défaut le jeu démarre en 854 X 480,<br>vous pouvez modifier cette valeur pour un confort de jeu
-                optimal. La résolution idéale est de 1280 X 720.
+                Set a custom resolution for your screen.<br>
+                By default, the game starts in 854 X 480,<br>you can modify this value for optimum gaming comfort. The ideal resolution is 1280 X 720.
             </div>
             <div class="settings-elements content-center">
                 <div class="input-size-element">
@@ -88,41 +81,41 @@
                     <div class="size-cross"></div>
                     <input type="number" class="height-size input-resolution">
                 </div>
-                <div class="size-reset size-btn">Par defaut</div>
+                <div class="size-reset size-btn">Default Settings</div>
             </div>
         </div>
 
-    <div class="titre-tab">Comportement du launcher au démarrage</div>
+    <div class="titre-tab">Launcher behavior at startup</div>
     <div class="settings-elements-box">
         <div class="setting-text">
-            Vous pouvez choisir si le launcher se ferme automatiquement ou reste ouvert lorsque vous lancez le jeu.
+            You can choose whether the launcher closes automatically or remains open when you launch the game.
         </div>
 
         <div class="settings-elements content-evenly close-box">
-            <div class="close-launcher close-btn">Fermer le launcher après le démarrage du jeu</div>
-            <div class="close-none close-btn">Garder le launcher ouvert</div>
+            <div class="close-launcher close-btn">Closing the launcher after starting the game</div>
+            <div class="close-none close-btn">Keep the launcher open</div>
         </div>
     </div>
 </div>
 
     <div id="credits-tab" class="container-settings content-scroll">
-        <div class="titre-tab">Conditions et services</div>
+        <div class="titre-tab">Conditions and services</div>
         <div class="settings-elements-box">
             <div class="setting-text">
-                Conditions d'utilisation de l'application client TSMP<br><br>
-                1. Restriction sur la distribution du contenu :<br><br>
-                La distribution, la reproduction ou le partage des ressources téléchargées par l'intermédiaire de l'application sont strictement interdits.
-                Cela comprend, sans s'y limiter, les images, les fichiers multimédias et les documents obtenus par l'intermédiaire de l'application.
-                Ces ressources sont la propriété exclusive de TSMP et de son équipe de détenteurs de droits,
-                et ne peuvent être utilisées qu'à des fins personnelles dans le cadre de l'application.<br><br>
+                TRIX Studios customer application terms of use<br><br>
+                1. Restriction on content distribution :<br><br>
+                The distribution, reproduction or sharing of resources downloaded through the application is strictly prohibited.
+                This includes, but is not limited to, images, multimedia files and documents obtained through the application.
+                These resources are the exclusive property of TRIX Studios and its team of rights holders,
+                and may only be used for personal purposes within the framework of the application.<br><br>
 
-                2. Les modifications apportées à l'application :<br><br>
-                Les modifications, les altérations, les décompilations et l'ingénierie inverse de l'application ne sont pas autorisées.
-                Cela inclut toute tentative de modification de sa fonctionnalité, de son interface ou de sa structure.
-                L'application est fournie dans sa forme originale, et toute modification non autorisée peut entraîner une violation des droits de propriété intellectuelle,
-                entraînant la révocation immédiate de vos droits d'utilisation.<br><br><br>
+                2. Modifications to the application :<br><br>
+                Modifications, alterations, decompilation and reverse engineering of the application are not permitted.
+                This includes any attempt to modify its functionality, interface or structure.
+                The application is provided in its original form, and any unauthorized modification may result in an infringement of intellectual property rights,
+                resulting in immediate revocation of your rights of use.<br><br><br>
 
-                Launcher fait par GgRd basé sur le projet de Luuxis<br>
+                Launcher made by GgRd based on the Luuxis project<br>
             </div>
         </div>
     </div>

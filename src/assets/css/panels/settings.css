@@ -27,7 +27,7 @@
 }
 
 .nav-box #save {
-    border: solid 4px rgb(45, 226, 45);
+    border: solid 4px rgb(227 26 26);
     margin: 3rem;
 }
 
@@ -44,20 +44,20 @@
 }
 
 #credits {
-    background-color: rgba(255, 192, 73, 0.5); /* Couleur de fond avec transparence */
+    background-color: rgba(0,107,16, 0.5); /* Couleur de fond avec transparence */
     color: white; /* Couleur du texte */
 }
 #credits:hover {
-    background-color: rgba(255, 192, 73, 0.5); /* Couleur de fond au survol avec transparence */
+    background-color: rgba(0,107,16, 0.5); /* Couleur de fond au survol avec transparence */
 }
 
 .nav-settings-btn:hover {
     transform: scale(1.1); /* Effet de zoom */
-    box-shadow: 0 0 15px rgba(255, 192, 73, 0.7); /* Effet de halo */
+    box-shadow: 0 0 15px rgba(18,227,32, 0.7); /* Effet de halo */
 }
 
 #save:hover {
-    box-shadow: 0 0 15px rgb(45, 226, 45); /* Effet de halo vert */
+    box-shadow: 0 0 15px rgb(227 26 26); /* Effet de halo vert */
 }
 
 .container-settings {
