@@ -1,6 +1,6 @@
 <p align="center"><img src="../src/assets/images/icon.png" alt="icon-launcher"></p>
 
-<h1 align="center">TSMP Launcher</h1>
+<h1 align="center">TRIX Studios Launcher</h1>
 
 ---
 
@@ -18,10 +18,10 @@ Si vous téléchargez à partir des Releases, sélectionnez le programme d'insta
 
  Plateforme | Fichier |
 | -------- | ---- |
-| Windows x64 | `TSMP-Launcher-win-x64.exe ` |
-| macOS x64 | `TSMP-Launcher-mac-x64.dmg` |
-| macOS arm64 | `TSMP-Launcher-mac-arm64.dmg` |
-| Linux x64 | `TSMP-Launcher-linux-x86_64.AppImage` |
+| Windows x64 | `TRIX-Studios-Launcher-win-x64.exe ` |
+| macOS x64 | `TRIX-Studios-Launcher-mac-x64.dmg` |
+| macOS arm64 | `TRIX-Studios-Launcher-mac-arm64.dmg` |
+| Linux x64 | `TRIX-Studios-Launcher-linux-x86_64.AppImage` |
 
 ---
 
