@@ -1,12 +1,12 @@
 {
     "name": "TRIXStudios-Launcher",
     "preductname": "TRIX Studios Launcher",
-    "version": "2.1.6",
+    "version": "2.1.7",
     "description": "Launcher Minecraft pour les projets du TRIX Studios",
     "main": "src/app.js",
     "author": {
         "name": "GgRd - TRIX Studios - Luuxis",
-        "email": "contact@trixsmp.online",
+        "email": "contact@trixstudios.online",
         "url": "https://github.com/ggrd"
     },
     "url": "http://launcher.trixsmp.online/",

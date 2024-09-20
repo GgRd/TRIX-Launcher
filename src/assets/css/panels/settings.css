@@ -44,16 +44,16 @@
 }
 
 #credits {
-    background-color: rgba(0,107,16, 0.5); /* Couleur de fond avec transparence */
+    background-color: rgba(0, 197, 98, 0.5); /* Couleur de fond avec transparence */
     color: white; /* Couleur du texte */
 }
 #credits:hover {
-    background-color: rgba(0,107,16, 0.5); /* Couleur de fond au survol avec transparence */
+    background-color: rgba(0, 197, 98, 0.5); /* Couleur de fond au survol avec transparence */
 }
 
 .nav-settings-btn:hover {
     transform: scale(1.1); /* Effet de zoom */
-    box-shadow: 0 0 15px rgba(18,227,32, 0.7); /* Effet de halo */
+    box-shadow: 0 0 15px rgba(0, 197, 98, 0.7); /* Effet de halo */
 }
 
 #save:hover {
@@ -167,7 +167,7 @@
 .profile-image {
     width: 70px;
     height: 70px;
-    background: url(../../images/default/setve.png);
+    background: url(../../images/default/avatar.png);
     background-size: cover;
     border-radius: 15px;
     pointer-events: none;
