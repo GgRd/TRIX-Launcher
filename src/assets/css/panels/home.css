@@ -16,8 +16,8 @@
     display: flex;
     bottom: 0;
     right: 0;
-    width: 15rem;
-    height: 5rem;
+    width: 240px;
+    height: 60px;
     justify-content: center; /* Centrer horizontalement */
     margin-bottom: 2rem; /* Ajuster la marge inférieure pour monter encore plus */
     align-items: center; /* Centrer verticalement */
@@ -32,7 +32,7 @@
     background: rgba(0,107,16, 0.1);
     margin-left: auto; /* Pousser vers la droite */
     margin-right: 40px; /* Ajouter une marge à droite pour les éloigner du bord */
-    margin-top: 1rem; /* Ajouter une marge en haut pour les monter */
+    margin-top: 20px; /* Ajouter une marge en haut pour les monter */
 }
 
 .status-info.active {
@@ -55,15 +55,6 @@
 .server-status-name {
     font-size: 1.4rem;
     color: var(--color);
-}
-
-.server-status-text {
-    font-size: 0.8rem;
-    color: #00c562;
-}
-
-.server-status-infos .red {
-    color: #FF0409;
 }
 
 .status-player-count:after {

@@ -1,8 +1,8 @@
 {
     "name": "TRIXStudios-Launcher",
     "preductname": "TRIX Studios Launcher",
-    "version": "2.1.7",
-    "description": "Launcher Minecraft pour les projets du TRIX Studios",
+    "version": "2.1.8",
+    "description": "Launcher Minecraft pour les évènements de TRIX Studios",
     "main": "src/app.js",
     "author": {
         "name": "GgRd - TRIX Studios - Luuxis",
@@ -39,6 +39,6 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/GgRd/TSMP-Launcher.git"
+        "url": "git+https://github.com/GgRd/TRIX-Launcher.git"
     }
 }

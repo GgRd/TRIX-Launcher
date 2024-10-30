@@ -90,7 +90,7 @@ class Index {
                     runAfterFinish: true
                 },
                 mac: {
-                    icon: "./app/assets/images/icon.icns",
+                    icon: "./app/assets/images/icon532.icns",
                     category: "public.app-category.games",
                     identity: null,
                     target: [{
