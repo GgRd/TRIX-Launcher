@@ -139,34 +139,6 @@
     text-align: center;
 }
 
-
-/*******************************************************************************
- *                                                                             *
- * 2K Launcher                                                                 *
- *                                                                             *
- ******************************************************************************/
-
-.avisoiz {
-    position: absolute;
-    letter-spacing: 0px;
-    color: #eaedf0;
-    display: flex;
-    position: absolute;
-    text-decoration: none;
-    max-width: calc(100% - 158px);
-    font-weight: 600;
-    font-size: 18px;
-    top: 705px;
-    left: 20px;
-    background-color: transparent;
-    border: none;
-    transform: translate(0, -50%);
-    overflow: hidden;
-    line-height: 25px;
-    align-items: center;
-    height: 3em;
-}
-
 /*******************************************************************************
  *                                                                             *
  * social server                                                               *

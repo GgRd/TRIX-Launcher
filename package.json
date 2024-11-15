@@ -1,7 +1,7 @@
 {
     "name": "TRIXStudios-Launcher",
     "preductname": "TRIX Studios Launcher",
-    "version": "2.1.8",
+    "version": "2.1.9",
     "description": "Launcher Minecraft pour les évènements de TRIX Studios",
     "main": "src/app.js",
     "author": {
