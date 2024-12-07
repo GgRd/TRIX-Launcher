@@ -96,27 +96,40 @@ ipcMain.on('new-status-discord', async () => {
     });
 });
 
+let isRpcReady = false;
 
-ipcMain.on('new-status-discord-jugando', async (event, status) => { 
-    console.log(status)
-    if(client) await client.destroy();
-    client = new rpc.Client({ transport: 'ipc' });
-    client.login({ clientId: '1192487519829373089' });
-    client.on('ready', () => {
-        client.request('SET_ACTIVITY', {
+client = new rpc.Client({ transport: 'ipc' });
+
+client.login({ clientId: '1192487519829373089' })
+    .then(() => {
+        isRpcReady = true;
+    });
+
+ipcMain.on('new-status-discord-jugando', async (event, status) => {
+
+    if (!isRpcReady) {
+        return;
+    }
+
+    const imageId = status.replace(/\s+/g, '-').toLowerCase();
+
+    try {
+        await client.request('SET_ACTIVITY', {
             pid: process.pid,
             activity: {
-                details: status,
+                details: `${status}`,
                 assets: {
-                    large_image: 'logo',
+                    large_image: imageId,
                 },
                 instance: true,
                 timestamps: {
                     start: startedAppTime
-                }
+                },
             },
         });
-    });
+    } catch (error) {
+        console.error('Erreur lors de la mise à jour du statut Discord :', error);
+    }
 });
 
 ipcMain.on('delete-and-new-status-discord', async () => { 
